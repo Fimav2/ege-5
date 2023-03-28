@@ -1,0 +1,26 @@
+r = 0
+for n in range(65,1000):
+    s = bin(n)[2:]
+    if s.count('0') == s.count('1'):
+        s = s + s[-1]
+    elif s.count('0') < s.count('1'):
+        s = s + '0'
+    else:
+        s = s + '1'
+    if s.count('0') == s.count('1'):
+        s = s + s[-1]
+    elif s.count('0') < s.count('1'):
+        s = s + '0'
+    else:
+        s = s + '1'
+    if s.count('0') == s.count('1'):
+        s = s + s[-1]
+    elif s.count('0') < s.count('1'):
+        s = s + '0'
+    else:
+        s = s + '1'
+    r = int(s, 2)
+    if r % 4 == 0:
+        print(n) 
+    
+         
