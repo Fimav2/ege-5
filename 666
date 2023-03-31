@@ -1,0 +1,26 @@
+x = -1
+for n in range(1000, 10000):
+    
+    n_str = str(n)
+    s1 = int(n_str[0]) + int(n_str[1])
+    s2 = int(n_str[1]) + int(n_str[2])
+    s3 = int(n_str[2]) + int(n_str[3])
+    
+    result = ''
+    if s1 > s2 and s2 >= s3:
+        result = str(s3) + str(s2)
+    if s1 > s3 and s3 >= s2:
+        result = str(s2) + str(s3)
+    if s2 > s1 and s1 >= s3:
+        result = str(s3) + str(s1)
+    if s2 > s3 and s3 >= s1:
+        result = str(s1) + str(s3)
+    if s3 > s1 and s1 >= s2:
+        result = str(s2) + str(s1)
+    if s3 > s2 and s2 >= s1:
+        result = str(s1) + str(s2)
+        
+    if result == '118':
+        x = n
+print(x)
+    
